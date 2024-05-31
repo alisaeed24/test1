@@ -3,7 +3,6 @@ pipeline {
         label 'jenkins-agent'
     }
     tools {
-        jdk 'jdk17'
         maven 'Maven3'
     }
     stages {
