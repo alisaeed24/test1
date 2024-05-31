@@ -16,5 +16,15 @@ pipeline {
                 git branch: 'main', credentialsId: 'gitlab', url: 'https://github.com/alisaeed24/test1'
             }
         }
+        stage('Build App') {
+            steps {
+                sh "mvn clean package"
+            }
+        }
+        stage('Test App') {
+            steps {
+                sh "mvn test"
+            }
+        }
     }
 }
